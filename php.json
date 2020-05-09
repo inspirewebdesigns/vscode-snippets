@@ -1,0 +1,47 @@
+{
+	"new_cmb2_box": {
+		"prefix": "new_cmb2_box",
+		"body": [
+			"new_cmb2_box(array(",
+			"  \"id\" => \"${1:yourprefix_demo_metabox}\",",
+			"  \"title\" => esc_html__( \"${2:Test Metabox}\", \"${3:cmb2}\" ),",
+			"  \"object_types\" => array(\"${4:page}\"),",
+			"  \"show_on\" => \"${5:yourprefix_show_if_front_page}\",",
+			"  \"context\" => \"${6:normal}\",",
+			"  \"priority\" => \"${7:high}\",",
+			"  \"show_names\" => ${8:true},",
+			"  \"cmb_styles\" => ${9:false},",
+			"  \"closed\" => ${10:true},",
+			"  \"classes\" => \"${11:extra-class}\",",
+			"  \"classes_cb\" => \"${12:yourprefix_add_some_classes}\",",
+			"  \"mb_callback_args\" => ${13:array()},",
+			"));"
+		],
+		"description": ""
+	},
+	"new_cmb2_box_options_page": {
+		"prefix": "new_cmb2_box_options_page",
+		"body": [
+			"new_cmb2_box(array(",
+			"  \"id\" => \"${1:yourprefix_demo_metabox}\",",
+			"  \"title\" => esc_html__( \"${2:Test Metabox}\", \"${3:cmb2}\" ),",
+			"  \"object_types\" => array(\"${4:page}\"),",
+			"  \"option_key\" => \"${5:option_key}\",",
+			"  \"icon_url\" => \"${6:dashicons-palmtree}\",",
+			"  \"menu_title\" => esc_html__(\"${7:options}\", \"${8:cmb2}\"),",
+			"  \"parent_slug\" => \"${9:themes.php}\",",
+			"  \"capability\" => \"${10:manage_options}\",",
+			"  \"position\" => ${11:1},",
+			"  \"admin_menu_hook\" => \"${12:network_admin_menu}\",",
+			"  \"display_cb\" => ${13:false},",
+			"  \"save_button\" => esc_html__(\"${14:Save Theme Options}\", \"${15:cmb2}\"),",
+			"  \"disable_settings_errors\" => ${16:true},",
+			"  \"message_cb\" => \"${17:yourprefix_options_page_message_callback}\",",
+			"  \"tab_group\" => \"${18: }\",",
+			"  \"tab_title\" => ${19:null},",
+			"  \"autoload\" => ${20:false}",
+			"));"
+		],
+		"description": ""
+	}
+}
