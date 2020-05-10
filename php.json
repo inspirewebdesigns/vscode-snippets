@@ -81,5 +81,67 @@
 			"));"
 		],
 		"description": ""
-	}
+	},
+	"register_graphql_object_type": {
+		"prefix": "register_graphql_object_type",
+		"body": [
+			"register_graphql_object_type(\"${1:type_name}\", array(",
+			"  \"description\" => __(\"${2:description}\", \"${3:your_textdomain}\"),",
+			"  \"fields\" => array(",
+			"    \"${4:name}\" => array(",
+			"      \"type\" => \"${5:string}\",",
+			"      \"description\" => __(\"${6:field_name}\", \"${3:your_textdomain}\")",
+			"    )",
+			"  )",
+			"));"
+		],
+		"description": ""
+	},
+	"register_graphql_field": {
+		"prefix": "register_graphql_field",
+		"body": [
+			"register_graphql_field(",
+			"  \"${1:RootQuery}\",",
+			"  \"${2:query_name}\",",
+			"  array(",
+			"    \"description\" => __(\"${3:description}\", \"${4:your_textdomain}\"),",
+			"    \"type\" => \"${5:string}\",",
+			"    \"resolve\" => function ($${6:object}) {",
+			"    }",
+			"  )",
+			");"
+		],
+		"description": ""
+	},
+	"register_graphql_enum_type": {
+		"prefix": "register_graphql_enum_type",
+		"body": [
+			"register_graphql_enum_type(\"${1:type_name}\", array(",
+			"  \"${2:description}\" => __(\"${3:description}\", \"${4:your_textdomain}\"),",
+			"  \"${5:values}\" => array(",
+			"    \"${6:ENUM}\" => array(",
+			"      \"value\" => \"${7:value}\"",
+			"      )",
+			"  )",
+			"));"
+		],
+		"description": ""
+	},
+	"register_graphql_union_type": {
+		"prefix": "register_graphql_union_type",
+		"body": [
+			"register_graphql_union_type(\"${1:type_name}\", array(",
+			"  \"typeNames\" => array(\"${2:string}\"),",
+			"  \"${3:resolveType}\" => function ($${4:object}) {",
+			"    $$type = null;",
+			"    switch ($${4:object}[\"type\"]) {",
+			"      case \"${5:type}\":",
+			"        break;",
+			"    }",
+			"    return $$type;",
+			"  }",
+			"));"
+		],
+		"description": ""
+	},
 }
