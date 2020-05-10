@@ -101,12 +101,12 @@
 		"prefix": "register_graphql_field",
 		"body": [
 			"register_graphql_field(",
-			"  \"${1:RootQuery}\",",
-			"  \"${2:query_name}\",",
+			"  \"${1:SchemaType}\",",
+			"  \"${2:queryName}\",",
 			"  array(",
-			"    \"description\" => __(\"${3:description}\", \"${4:slug}\"),",
-			"    \"type\" => \"${5:String}\",",
-			"    \"resolve\" => function ($${6:object}) {",
+			"    \"type\" => \"${3:String}\",",
+			"    \"description\" => __(\"${4:description}\", \"${5:slug}\"),",
+			"    \"resolve\" => function ($${6:source}, $${7:args}, $${8:info}, $${9:context}) {",
 			"    }",
 			"  )",
 			");"
