@@ -85,11 +85,11 @@
 	"register_graphql_object_type": {
 		"prefix": "register_graphql_object_type",
 		"body": [
-			"register_graphql_object_type(\"${1:type_name}\", array(",
+			"register_graphql_object_type(\"${1:TypeName}\", array(",
 			"  \"description\" => __(\"${2:description}\", \"${3:slug}\"),",
 			"  \"fields\" => array(",
 			"    \"${4:name}\" => array(",
-			"      \"type\" => \"${5:string}\",",
+			"      \"type\" => \"${5:String}\",",
 			"      \"description\" => __(\"${6:field_name}\", \"${3:slug}\")",
 			"    )",
 			"  )",
@@ -105,7 +105,7 @@
 			"  \"${2:query_name}\",",
 			"  array(",
 			"    \"description\" => __(\"${3:description}\", \"${4:slug}\"),",
-			"    \"type\" => \"${5:string}\",",
+			"    \"type\" => \"${5:String}\",",
 			"    \"resolve\" => function ($${6:object}) {",
 			"    }",
 			"  )",
@@ -116,7 +116,7 @@
 	"register_graphql_enum_type": {
 		"prefix": "register_graphql_enum_type",
 		"body": [
-			"register_graphql_enum_type(\"${1:type_name}\", array(",
+			"register_graphql_enum_type(\"${1:TypeName}\", array(",
 			"  \"${2:description}\" => __(\"${3:description}\", \"${4:slug}\"),",
 			"  \"${5:values}\" => array(",
 			"    \"${6:ENUM}\" => array(",
@@ -130,12 +130,12 @@
 	"register_graphql_union_type": {
 		"prefix": "register_graphql_union_type",
 		"body": [
-			"register_graphql_union_type(\"${1:type_name}\", array(",
-			"  \"typeNames\" => array(\"${2:string}\"),",
+			"register_graphql_union_type(\"${1:TypeName}\", array(",
+			"  \"typeNames\" => array(\"${2:String}\"),",
 			"  \"${3:resolveType}\" => function ($${4:object}) {",
 			"    $$type = null;",
 			"    switch ($${4:object}[\"type\"]) {",
-			"      case \"${5:type}\":",
+			"      case \"${5:Type}\":",
 			"        break;",
 			"    }",
 			"    return $$type;",
