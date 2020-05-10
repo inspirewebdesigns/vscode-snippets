@@ -90,7 +90,7 @@
 			"  \"fields\" => array(",
 			"    \"${4:name}\" => array(",
 			"      \"type\" => \"${5:String}\",",
-			"      \"description\" => __(\"${6:field_name}\", \"${3:slug}\")",
+			"      \"description\" => __(\"${6:description}\", \"${3:slug}\")",
 			"    )",
 			"  )",
 			"));"
