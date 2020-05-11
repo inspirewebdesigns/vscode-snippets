@@ -3,7 +3,7 @@
     "prefix": "new_cmb2_box",
     "body": [
       "new_cmb2_box(array(",
-      "  \"id\" => \"${1:id}\",",
+      "  \"id\" => $$prefix . \"${1:id}\",",
       "  \"title\" => esc_html__( \"${2:Test Metabox}\", \"${3:text-domain}\" ),",
       "  \"object_types\" => array(\"${4:page}\"),",
       "  \"show_on\" => \"${5:show_if_front_page}\",",
@@ -24,7 +24,7 @@
     "prefix": "new_cmb2_box_options_page",
     "body": [
       "new_cmb2_box(array(",
-      "  \"id\" => \"${1:id}\",",
+      "  \"id\" => $$prefix . \"${1:id}\",",
       "  \"title\" => esc_html__( \"${2:Test Metabox}\", \"${3:text-domain}\" ),",
       "  \"object_types\" => array(\"${4:page}\"),",
       "  \"option_key\" => \"${5:option_key}\",",
@@ -50,7 +50,7 @@
     "prefix": "add_field",
     "body": [
       "$${1:cmb2}->add_field(array(",
-      "  \"id\" => \"${2:id}\",",
+      "  \"id\" => $$prefix . \"${2:id}\",",
       "  \"type\" => \"${3:type}\",",
       "  \"name\" => esc_html__(\"${4:name}\", \"${5:text-domain}\"),",
       "  \"desc\" => \"${6:desc}\",",
