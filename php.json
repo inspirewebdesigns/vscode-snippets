@@ -82,6 +82,17 @@
     ],
     "description": ""
   },
+  "add_group_field": {
+    "prefix": "add_group_field",
+    "body": [
+      "$${1:cmb2}->add_group_field($${2:group_field_id}, array(",
+      "  \"id\" => \"${3:id}\",",
+      "  \"type\" => \"${4:type}\",",
+      "  \"name\" => esc_html__(\"${5:name}\", \"${6:text-domain}\"),",
+      "  \"description\" => \"${7:description}\",",
+      "));"
+    ]
+  },
   "register_graphql_object_type": {
     "prefix": "register_graphql_object_type",
     "body": [
