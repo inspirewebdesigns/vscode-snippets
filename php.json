@@ -82,11 +82,31 @@
     ],
     "description": ""
   },
+  "group_field": {
+    "prefix": "group_field",
+    "body": [
+      "$${1:group_field_id} = $${2:cmb2}->add_field(array(",
+      "  \"id\" => $$prefix . \"${3:id}\",",
+      "  \"type\" => \"group\",",
+      "  \"name\" => esc_html__(\"${4:name}\", \"${5:text-domain}\"),",
+      "  \"desc\" => \"${6:desc}\",",
+      "  \"repeatable\" => ${7:true},",
+      "  \"options\" => array(",
+      "    \"group-title\" => \"${4:name} {#}\",",
+      "    \"add_button\" => \"Add Another ${4:name}\",",
+      "    \"remove_button\" => \"Remove ${4:name}\",",
+      "    \"closed\" => ${8:false},",
+      "    \"sortable\" => ${9:true},",
+      "  )",
+      "));"
+    ],
+    "description": ""
+  },
   "add_group_field": {
     "prefix": "add_group_field",
     "body": [
       "$${1:cmb2}->add_group_field($${2:group_field_id}, array(",
-      "  \"id\" => \"${3:id}\",",
+      "  \"id\" => $$prefix . \"${3:id}\",",
       "  \"type\" => \"${4:type}\",",
       "  \"name\" => esc_html__(\"${5:name}\", \"${6:text-domain}\"),",
       "  \"description\" => \"${7:description}\",",
